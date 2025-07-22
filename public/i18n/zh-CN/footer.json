@@ -1,0 +1,12 @@
+{
+    "description": "Hcoin(HCN)是一个基于Ethereum(ERC20)和多链的公链合约，旨在提供有价数字证据链上存证。支持主流钱包（如MetaMask、WalletConnect等），可以在多种客户端进行存证上传。",
+    "platform": "平台",
+    "nft": "NFT",
+    "token": "代币",
+    "evidence_storage": "公链存证",
+    "resources": "资源",
+    "community": "社区建设",
+    "contact": "联系我们",
+    "docs": "文档",
+    "api_docs": "API文档"
+}

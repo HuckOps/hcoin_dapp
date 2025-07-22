@@ -1,0 +1,17 @@
+{
+    "helmet": "Tablero",
+    "welcome": "Bienvenido al mundo Web3",
+    "description": "Explora el futuro descentralizado, controla tus activos digitales e identidad. Conecta tu billetera para experimentar la verdadera propiedad de Internet.",
+    "share": "Compartir",
+    "spot": "Spot",
+    "futures": "Futuros",
+    "block_height": "Altura del bloque",
+    "total_minted": "Hcoin Total Acuñado",
+    "transaction_hash": "Hash de transacción",
+    "event_method": "Tipo de evento", 
+    "block": "Bloque",
+    "from": "De",
+    "to": "A",
+    "amount": "Cantidad",
+    "gas_used": "Gas usado"
+}

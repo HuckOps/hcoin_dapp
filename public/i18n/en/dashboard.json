@@ -1,0 +1,28 @@
+{
+    "helmet": "Dashboard",
+
+    "welcome": "Welcome to the Web3 World",
+    "description": "Explore the decentralized future, take control of your digital assets and identity. Connect your wallet to experience true internet ownership.",
+    "share": "Share",
+    "spot": "Spot",
+    "futures": "Futures",
+    "block_height": "Block Height",
+    "total_minted": "Hcoin total Minted",
+    "transaction_hash": "Transaction Hash",
+    "event_method": "Event Type",
+    "block": "Block",
+    "from": "From",
+    "to": "To",
+    "amount": "Amount",
+    "gas_used": "Gas Used",
+    "faucet": "Faucet",
+    "faucet_description": "Get test tokens",
+    "claim": "Claim",
+    "alert_input_error": "Please enter a valid address",
+    "alert_connect_wallet": "Please connect your wallet",
+    "transfer": "Transfer",
+    "transaction_description": "Transaction details",
+    "alert_transfer_amount_required": "Please enter transfer amount",
+    "alter_transfer_amount_min": "Transfer amount cannot be less than 0",
+    "add_to_wallet": "Add to wallet"
+}

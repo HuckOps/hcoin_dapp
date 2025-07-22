@@ -1,0 +1,12 @@
+{
+    "description": "Hcoin(HCN)はEthereum(ERC20)とマルチチェーンに基づくパブリックチェーンコントラクトで、価値のあるデジタル証拠のオンチェーン保存を提供することを目的としています。主流のウォレット（MetaMask、WalletConnectなど）をサポートし、複数のクライアントで証拠のアップロードが可能です。",
+    "platform": "プラットフォーム",
+    "nft": "NFT",
+    "token": "トークン",
+    "evidence_storage": "パブリックチェーン保存",
+    "resources": "リソース",
+    "community": "コミュニティ建設",
+    "contact": "お問い合わせ",
+    "docs": "ドキュメント",
+    "api_docs": "APIドキュメント"
+}

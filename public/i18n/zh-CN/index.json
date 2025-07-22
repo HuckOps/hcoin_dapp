@@ -1,0 +1,13 @@
+{
+    "title": "Hcoin(HCN)智能合约",
+    "sub_title": "专注公链数字公开曝光存证和有价数字证据类NFT流通",
+    "description": "一个基于Ethereum(ERC20)和多链的公链合约，旨在提供有价数字证据链上存证。",
+    "add_to_wallet": "添加到钱包",
+    "goto_github": "访问Github",
+    "features": "功能介绍",
+    "features_intro1": "HCN快速起步",
+    "features_intro2": "开启你的公链存证之路",
+    "features_card1_title": "极好的兼容性",
+    "features_card1_desc": "只要兼容ERC20的钱包，就可以进行收取、支付和存证。"
+    
+}

@@ -1,0 +1,12 @@
+{
+    "description": "Hcoin(HCN) es un contrato de cadena pública basado en Ethereum(ERC20) y multi-cadena, diseñado para proporcionar almacenamiento de evidencia digital valiosa en la cadena. Admite billeteras principales (como MetaMask, WalletConnect, etc.) y permite cargar evidencia en múltiples clientes.",
+    "platform": "Plataforma",
+    "nft": "NFT",
+    "token": "Token",
+    "evidence_storage": "Almacenamiento en cadena pública",
+    "resources": "Recursos",
+    "community": "Construcción de comunidad",
+    "contact": "Contáctenos",
+    "docs": "Documentación",
+    "api_docs": "Documentación de API"
+}

@@ -1,0 +1,32 @@
+{
+    "helmet": "仪表盘",
+
+    "welcome": "欢迎来到 Web3 世界",
+    "description": "探索去中心化的未来，掌控您的数字资产和身份。连接您的钱包开始体验真正的互联网所有权。",
+    "share": "分享",
+    "spot": "现货",
+    "futures": "期货",
+    "block_height": "区块高度",
+    "total_minted": "HCoin铸币总量",
+
+    "transaction_hash": "交易哈希",
+    "event_method": "事件类型",
+    "block": "区块",
+    "timestamp": "时间戳",
+    "from": "来源",
+    "to": "目标",
+    "amount": "数量",
+    "gas_used": "消耗的Gas",
+    "faucet": "水龙头",
+    
+    "faucet_description": "获取测试代币",
+    "claim": "领取",
+
+    "alert_input_error": "请输入正确的地址",
+    "alert_connect_wallet": "请连接钱包",
+    "transfer": "转账",
+    "transaction_description": "交易详情",
+    "alert_transfer_amount_required": "请输入转账金额",
+    "alter_transfer_amount_min": "转账金额不能小于0",
+    "add_to_wallet": "添加到钱包"
+}
