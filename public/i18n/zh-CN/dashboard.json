@@ -8,7 +8,9 @@
     "futures": "期货",
     "block_height": "区块高度",
     "total_minted": "HCoin铸币总量",
-
+    "total_minted_description": "请先连接钱包再查看其他网铸币总量，默认显示主网铸币总量。",
+    "claim_address_description": "当前合约版本仅可给自己账户领取代币，请用需要领取代币的账户连接钱包后领取。",
+    "alert_claim_success": "代币领取成功",
     "transaction_hash": "交易哈希",
     "event_method": "事件类型",
     "block": "区块",
@@ -28,5 +30,6 @@
     "transaction_description": "交易详情",
     "alert_transfer_amount_required": "请输入转账金额",
     "alter_transfer_amount_min": "转账金额不能小于0",
-    "add_to_wallet": "添加到钱包"
+    "add_to_wallet": "添加到钱包",
+    "alert_transfer_success": "转账成功"
 }

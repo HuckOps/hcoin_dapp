@@ -1,12 +1,13 @@
 {
     "title": "Hcoin(HCN) 스마트 계약",
-    "sub_title": "퍼블릭 체인 디지털 공개 노출 저장 및 가치 있는 디지털 증거 클래스 NFT 유통에 중점",
-    "description": "Ethereum(ERC20) 및 멀티체인 기반 퍼블릭 체인 계약으로, 가치 있는 디지털 증거의 온체인 저장을 제공합니다.",
+    "sub_title": "공개 블록체인 기반 디지털 증거 공개 및 NFT 유통에 특화",
+    "description": "Ethereum(ERC20) 및 멀티체인을 기반으로 한 퍼블릭 스마트 계약으로, 가치 있는 디지털 증거를 온체인에 저장하는 것을 목표로 합니다.",
     "add_to_wallet": "지갑에 추가",
-    "goto_github": "Github 방문",
+    "goto_github": "GitHub 방문하기",
     "features": "기능 소개",
     "features_intro1": "HCN 빠른 시작",
-    "features_intro2": "퍼블릭 체인 저장 여정을 시작하세요",
+    "features_intro2": "공개 블록체인 증명 여정 시작하기",
     "features_card1_title": "우수한 호환성",
-    "features_card1_desc": "ERC20을 호환하는 지갑이라면 수신, 결제 및 증거 저장이 가능합니다."
+    "features_card1_desc": "ERC20 호환 지갑만 있으면 수령, 결제 및 증명 가능합니다.",
+    "add_to_wallet_tooltip": "먼저 지갑을 연결한 후 지갑에 추가해 주세요"
 }

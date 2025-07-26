@@ -1,12 +1,13 @@
 {
-    "title": "Hcoin(HCN) Smart Contract",
-    "sub_title": "Focus on public chain digital exposure storage and valuable digital evidence NFT circulation",
-    "description": "An Ethereum(ERC20) and multi-chain based public chain contract designed to provide on-chain deposit of valuable digital evidence.",
+    "title": "Hcoin (HCN) Smart Contract",
+    "sub_title": "Focused on public chain digital notarization and tradable NFT-based digital evidence",
+    "description": "A public blockchain contract based on Ethereum (ERC20) and multi-chain, designed to provide on-chain notarization for valuable digital evidence.",
     "add_to_wallet": "Add to Wallet",
-    "goto_github": "Visit Github",
+    "goto_github": "Visit GitHub",
     "features": "Features",
     "features_intro1": "HCN Quick Start",
-    "features_intro2": "Start Your Public Chain Storage Journey",
+    "features_intro2": "Begin your journey of on-chain certification",
     "features_card1_title": "Excellent Compatibility",
-    "features_card1_desc": "As long as the wallet is ERC20 compatible, you can receive, pay and store evidence."
+    "features_card1_desc": "Any wallet compatible with ERC20 can receive, pay, and notarize.",
+    "add_to_wallet_tooltip": "Please connect your wallet before attempting to add"
 }

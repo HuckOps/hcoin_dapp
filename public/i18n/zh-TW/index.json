@@ -1,12 +1,13 @@
 {
-    "title": "Hcoin(HCN)智能合約",
-    "sub_title": "專注公鏈數字公開曝光存證和有價數字證據類NFT流通",
-    "description": "一個基於Ethereum(ERC20)和多鏈的公鏈合約，旨在提供有價數字證據鏈上存證。",
-    "add_to_wallet": "添加到錢包",
-    "goto_github": "訪問Github",
+    "title": "Hcoin(HCN) 智能合約",
+    "sub_title": "專注於公鏈數位公開曝光存證與有價數位證據類 NFT 流通",
+    "description": "基於 Ethereum（ERC20）和多鏈的公鏈合約，旨在提供有價數位證據的鏈上存證。",
+    "add_to_wallet": "加入錢包",
+    "goto_github": "前往 GitHub",
     "features": "功能介紹",
-    "features_intro1": "HCN快速起步",
+    "features_intro1": "HCN 快速啟動",
     "features_intro2": "開啟你的公鏈存證之路",
-    "features_card1_title": "極好的兼容性",
-    "features_card1_desc": "只要兼容ERC20的錢包，就可以進行收取、支付和存證。"
+    "features_card1_title": "極佳的相容性",
+    "features_card1_desc": "只要是相容 ERC20 的錢包，都可進行收款、支付與存證。",
+    "add_to_wallet_tooltip": "請先連接錢包後再嘗試添加至錢包"
 }

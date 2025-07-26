@@ -1,16 +1,19 @@
 {
     "helmet": "Dashboard",
-
     "welcome": "Welcome to the Web3 World",
-    "description": "Explore the decentralized future, take control of your digital assets and identity. Connect your wallet to experience true internet ownership.",
+    "description": "Explore the decentralized future and take control of your digital assets and identity. Connect your wallet to experience true ownership of the internet.",
     "share": "Share",
     "spot": "Spot",
     "futures": "Futures",
     "block_height": "Block Height",
-    "total_minted": "Hcoin total Minted",
+    "total_minted": "Total HCoin Minted",
+    "total_minted_description": "Please connect your wallet to view minting totals on other networks. The default display is for the mainnet.",
+    "claim_address_description": "This contract version only allows claiming tokens for your own account. Please connect the wallet of the receiving account.",
+    "alert_claim_success": "Tokens claimed successfully",
     "transaction_hash": "Transaction Hash",
     "event_method": "Event Type",
     "block": "Block",
+    "timestamp": "Timestamp",
     "from": "From",
     "to": "To",
     "amount": "Amount",
@@ -21,8 +24,9 @@
     "alert_input_error": "Please enter a valid address",
     "alert_connect_wallet": "Please connect your wallet",
     "transfer": "Transfer",
-    "transaction_description": "Transaction details",
-    "alert_transfer_amount_required": "Please enter transfer amount",
+    "transaction_description": "Transaction Details",
+    "alert_transfer_amount_required": "Please enter a transfer amount",
     "alter_transfer_amount_min": "Transfer amount cannot be less than 0",
-    "add_to_wallet": "Add to wallet"
+    "add_to_wallet": "Add to Wallet",
+    "alert_transfer_success": "Transfer successful"
 }

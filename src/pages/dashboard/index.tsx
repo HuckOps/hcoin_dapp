@@ -4,7 +4,6 @@ import { useEthersProvider, useEthersSigner } from '@ant-design/web3-ethers';
 import { useTranslation } from 'react-i18next';
 import Welcome from './welcome';
 import Coin from './coin';
-import Transfers from './transfers';
 import { Helmet } from 'umi';
 // 将全局声明移动到文件最顶部
 declare global {

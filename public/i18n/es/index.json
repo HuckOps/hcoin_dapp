@@ -1,12 +1,13 @@
 {
-    "title": "Contrato inteligente Hcoin(HCN)",
-    "sub_title": "Centrado en el almacenamiento de exposición digital en cadena pública y la circulación de NFT de evidencia digital valiosa",
-    "description": "Un contrato de cadena pública basado en Ethereum(ERC20) y multi-cadena, diseñado para proporcionar almacenamiento de evidencia digital valiosa en la cadena.",
+    "title": "Contrato inteligente Hcoin (HCN)",
+    "sub_title": "Enfocado en la certificación digital pública y la circulación de pruebas digitales en forma de NFT",
+    "description": "Un contrato público basado en Ethereum (ERC20) y múltiples cadenas, diseñado para almacenar evidencia digital valiosa en la cadena.",
     "add_to_wallet": "Agregar a la billetera",
-    "goto_github": "Visitar Github",
-    "features": "Características",
+    "goto_github": "Visitar GitHub",
+    "features": "Funciones",
     "features_intro1": "Inicio rápido de HCN",
-    "features_intro2": "Comience su viaje de almacenamiento en cadena pública",
+    "features_intro2": "Comienza tu camino de certificación en blockchain pública",
     "features_card1_title": "Excelente compatibilidad",
-    "features_card1_desc": "Siempre que la billetera sea compatible con ERC20, puede recibir, pagar y almacenar evidencia."
+    "features_card1_desc": "Compatible con cualquier billetera ERC20 para recibir, pagar y certificar.",
+    "add_to_wallet_tooltip": "Conecta tu billetera antes de intentar agregarla"
 }

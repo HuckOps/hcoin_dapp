@@ -1,12 +1,14 @@
-import { ReadonlyContractInstance, SignerContractInstance } from '@/utils/contract/contract';
+import { ContractInstance, getContractAddress } from '@/utils/contract/contract';
 import { useEthersProvider, useEthersSigner } from '@ant-design/web3-ethers';
-import { Button, Form, Input, message } from 'antd';
+import { Button, Form, Input, message, Popover } from 'antd';
 import { FormInstance, useForm } from 'antd/es/form/Form';
+import { ethers, JsonRpcProvider } from 'ethers';
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAccount, useBlockNumber } from 'wagmi';
-
+import { InfoCircleOutlined } from '@ant-design/icons';
+import { Tooltip } from 'antd';
 type Props = {
   coinsPrice: Record<string, any>;
 };
@@ -18,7 +20,6 @@ export default function Coin(props: Props) {
   const provider = useEthersProvider(); // ethers provider
   const signer = useEthersSigner();
   const blockNumber = useBlockNumber();
-  const [latestBlock, setLatestBlock] = useState<number>(0);
 
   // const transferRef = useRef<FormInstance>(null);
   const [transferForm] = useForm();
@@ -27,34 +28,60 @@ export default function Coin(props: Props) {
   useEffect(() => {
     console.log('blockNumber', blockNumber);
     console.log(provider, signer);
+
+    if (provider) {
+      // 监听网络变更事件
+      const handleNetworkChange = (newNetwork: JsonRpcProvider) => {
+        UpdateTotalMinted();
+        console.log('网络已切换:', newNetwork);
+        // 这里添加网络切换后的处理逻辑
+      };
+
+      provider.on('network', handleNetworkChange);
+
+      // 组件卸载时移除监听器
+      return () => {
+        provider.off('network', handleNetworkChange);
+      };
+    }
   }, [provider, signer]);
+
   useEffect(() => {
-    ReadonlyContractInstance.totalSupply().then(totalSupply => {
-      console.log('Total Supply:', totalSupply.toString());
-      setTotalMinted(Number(totalSupply.toString()));
-    });
-    let latestBlock = 0;
-    provider?.getBlockNumber().then(blockNumber => {
-      console.log('Latest Block:', blockNumber);
-      setLatestBlock(blockNumber);
-      latestBlock = blockNumber;
-    });
+    UpdateTotalMinted();
   }, []);
+
+  const UpdateTotalMinted = async () => {
+    ContractInstance(provider as ethers.JsonRpcProvider, signer as ethers.JsonRpcSigner)
+      .then(instance => instance.totalSupply())
+      .then(totalSupply => {
+        console.log('Total Supply:', totalSupply.toString());
+        setTotalMinted(Number(totalSupply.toString()));
+      })
+      .catch(err => {
+        message.error(err.message);
+        setTotalMinted(0);
+      });
+  };
 
   const claim = async () => {
     const claimAddress = claimAddressRef.current?.value;
-    if (!claimAddress) {
-      message.error(t('alert_input_error'));
-      return;
-    }
+    // if (!claimAddress) {
+    //   message.error(t('alert_input_error'));
+    //   return;
+    // }
     if (!signer) {
       message.error(t('alert_connect_wallet'));
       return;
     }
-    SignerContractInstance(signer)
-      .faucet()
+    (await ContractInstance(provider as ethers.JsonRpcProvider, signer as ethers.JsonRpcSigner))
+      .claim()
       .then(tx => {
+        message.success(t('alert_claim_success'));
         console.log(tx);
+      })
+      .catch(err => {
+        console.log(typeof err);
+        message.error(err.message);
       });
   };
   const transfer = async () => {
@@ -67,7 +94,7 @@ export default function Coin(props: Props) {
 
     // console.log(signer);
     const result = await transferForm.validateFields();
-    SignerContractInstance(signer)
+    (await ContractInstance(provider as ethers.JsonRpcProvider, signer as ethers.JsonRpcSigner))
       .transfer(result.to, result.amount)
       .then(tx => {
         console.log('tx', tx);
@@ -88,12 +115,13 @@ export default function Coin(props: Props) {
       return;
     }
 
-    const tokenAddress = process.env.CONTRACT_ADDRESS; // ✅ 你的代币地址
+    const tokenAddress = await getContractAddress(provider as ethers.JsonRpcProvider); // ✅ 你的代币地址
     const tokenSymbol = 'HCN'; // ✅ 代币符号
     const tokenDecimals = 0; // ✅ 代币小数位数
     const tokenImage = 'https://www.huckops.xyz/img/favicon.png'; // ✅ 可选图标 URL
-
+    console.log('tasdarwq');
     try {
+      console.log(tokenAddress);
       const wasAdded = await window.ethereum.request({
         method: 'wallet_watchAsset',
         params: {
@@ -153,7 +181,11 @@ export default function Coin(props: Props) {
               <div>
                 <h3 className="text-xl font-semibold">ETH {t('block_height')}</h3>
                 <div className="flex items-end justify-between">
-                  <p className="text-2xl font-bold">{blockNumber.data?.toString()}</p>
+                  <p className="text-2xl font-bold">
+                    {blockNumber.data
+                      ? new Intl.NumberFormat('en-US').format(blockNumber.data)
+                      : '-'}
+                  </p>
                 </div>
               </div>
             </div>
@@ -166,10 +198,17 @@ export default function Coin(props: Props) {
           >
             <div className="flex justify-between items-center">
               <div>
-                <h3 className="text-xl font-semibold">{t('total_minted')}</h3>
+                <h3 className="text-xl font-semibold">
+                  {t('total_minted')}
+                  <Popover content={t('total_minted_description')}>
+                    <InfoCircleOutlined className="ml-1 text-gray-500 h-3 w-3" />
+                  </Popover>
+                </h3>
                 <div className="flex items-center space-x-4">
                   <div className="flex items-end justify-between">
-                    <p className="text-2xl font-bold">{totalMinted}</p>
+                    <p className="text-2xl font-bold">
+                      {new Intl.NumberFormat('en-US').format(totalMinted)}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -189,12 +228,15 @@ export default function Coin(props: Props) {
               <h3 className="text-xl font-semibold">{t('faucet')}</h3>
               <div className="text-sm text-gray-600 max-w-2xl">{t('faucet_description')}</div>
               <div>
-                <input
-                  type="text"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="0x..."
-                  ref={claimAddressRef}
-                />
+                <Tooltip title={t('claim_address_description')}>
+                  <input
+                    type="text"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="0x..."
+                    ref={claimAddressRef}
+                    disabled={true}
+                  />
+                </Tooltip>
                 <button
                   className="w-full bg-gradient-to-r from-blue-500 to-blue-400 text-white py-2 rounded-md mt-2 disabled:bg-gray-400 disabled:opacity-50 disabled:cursor-not-allowed hover:from-blue-600 hover:to-blue-500 disabled:hover:from-gray-400"
                   disabled={!signer}
@@ -205,6 +247,7 @@ export default function Coin(props: Props) {
                 <button
                   className="w-full bg-gradient-to-r from-blue-500 to-blue-400 text-white py-2 rounded-md mt-2 disabled:bg-gray-400 disabled:opacity-50 disabled:cursor-not-allowed hover:from-blue-600 hover:to-blue-500 disabled:hover:from-gray-400"
                   onClick={addToWallet}
+                  disabled={!signer}
                 >
                   {t('add_to_wallet')}
                 </button>

@@ -1,12 +1,13 @@
 {
-    "title": "Hcoin(HCN)スマートコントラクト",
-    "sub_title": "パブリックチェーンデジタル公開曝露保存と価値のあるデジタル証拠クラスNFT流通に特化",
-    "description": "Ethereum(ERC20)とマルチチェーンに基づくパブリックチェーンコントラクトで、価値のあるデジタル証拠のオンチェーン保存を提供することを目的としています。",
+    "title": "Hcoin(HCN) スマートコントラクト",
+    "sub_title": "パブリックチェーン上のデジタル証拠公開と有価証拠NFTの流通に特化",
+    "description": "Ethereum（ERC20）およびマルチチェーンに基づくパブリックチェーンコントラクト。有価デジタル証拠のオンチェーン証明を提供します。",
     "add_to_wallet": "ウォレットに追加",
-    "goto_github": "Githubを訪問",
+    "goto_github": "GitHub を開く",
     "features": "機能紹介",
-    "features_intro1": "HCNクイックスタート",
-    "features_intro2": "あなたのパブリックチェーン保存の旅を始めましょう",
+    "features_intro1": "HCN クイックスタート",
+    "features_intro2": "パブリックチェーン証明の道を始めよう",
     "features_card1_title": "優れた互換性",
-    "features_card1_desc": "ERC20に互換性のあるウォレットであれば、受信、支払い、証拠の保存が可能です。"
+    "features_card1_desc": "ERC20 に対応したウォレットであれば、受取、支払、証明が可能です。",
+    "add_to_wallet_tooltip": "ウォレットを接続してから追加をお試しください"
 }

@@ -1,12 +1,13 @@
 {
-    "title": "Contrat intelligent Hcoin(HCN)",
-    "sub_title": "Se concentrer sur le stockage d'exposition numérique sur chaîne publique et la circulation de NFT d'évidences numériques valables",
-    "description": "Un contrat de chaîne publique basé sur Ethereum(ERC20) et multi-chaînes, conçu pour fournir un stockage d'évidences numériques valables sur la chaîne.",
+    "title": "Contrat intelligent Hcoin (HCN)",
+    "sub_title": "Spécialisé dans la preuve numérique sur chaîne publique et les NFTs de preuves ayant une valeur",
+    "description": "Un contrat public basé sur Ethereum (ERC20) et multi-chaînes, visant à stocker des preuves numériques de valeur sur la blockchain.",
     "add_to_wallet": "Ajouter au portefeuille",
-    "goto_github": "Visiter Github",
-    "features": "Fonctionnalités",
-    "features_intro1": "Démarrage rapide HCN",
-    "features_intro2": "Démarrez votre voyage de stockage sur chaîne publique",
+    "goto_github": "Accéder à GitHub",
+    "features": "Présentation des fonctionnalités",
+    "features_intro1": "Démarrage rapide avec HCN",
+    "features_intro2": "Commencez votre parcours de preuve sur blockchain publique",
     "features_card1_title": "Excellente compatibilité",
-    "features_card1_desc": "Tant que le portefeuille est compatible ERC20, vous pouvez recevoir, payer et stocker des preuves."
+    "features_card1_desc": "Compatible avec tout portefeuille prenant en charge ERC20 pour recevoir, payer et certifier.",
+    "add_to_wallet_tooltip": "Veuillez connecter votre portefeuille avant d’ajouter"
 }

@@ -20,16 +20,11 @@ import {
 import { http } from 'wagmi';
 import { history } from 'umi';
 import Footer from './footer';
+import { subscribe } from 'diagnostics_channel';
 const Web3Dashboard = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
   const particlesRef = useRef(null);
   const { t } = useTranslation('layout');
-
-  useEffect(() => {
-    console.log(process.env.CONTRACT_ADDRESS);
-    // 粒子动画初始化
-    // 这里可以添加粒子动画的初始化代码
-  }, []);
 
   const [connecting, setConnecting] = useState(false);
 
@@ -54,6 +49,12 @@ const Web3Dashboard = () => {
       }}
       wallets={[MetaMask(), WalletConnect()]}
       chains={[Mainnet, Sepolia]}
+      // 添加网络变更全局回调
+      // @ts-ignore
+      initialState={{
+        status: 'disconnected',
+        chainId: Mainnet.id,
+      }}
     >
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white text-gray-800 font-sans overflow-x-hidden">
         {/* 导航栏 */}

@@ -8,6 +8,7 @@
     "features_intro1": "HCN快速起步",
     "features_intro2": "开启你的公链存证之路",
     "features_card1_title": "极好的兼容性",
-    "features_card1_desc": "只要兼容ERC20的钱包，就可以进行收取、支付和存证。"
+    "features_card1_desc": "只要兼容ERC20的钱包，就可以进行收取、支付和存证。",
+    "add_to_wallet_tooltip": "请先连接钱包再尝试添加到钱包"
     
 }

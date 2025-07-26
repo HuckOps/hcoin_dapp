@@ -1,7 +1,7 @@
 import { defineConfig } from 'umi';
 // 确保正确加载环境变量
-import dotenv from 'dotenv';
-dotenv.config({ path: '.env' }); // 明确指定.env文件路径
+// import dotenv from 'dotenv';
+// dotenv.config({ path: '.env' }); // 明确指定.env文件路径
 
 console.log(process.env);
 export default defineConfig({
@@ -16,8 +16,7 @@ export default defineConfig({
   plugins: ['@umijs/plugins/dist/tailwindcss'],
   define: {
     'process.env': {
-      CONTRACT_ADDRESS: process.env.CONTRACT_ADDRESS,
-      SEPOLIA_RPC: process.env.SEPOLIA_RPC,
+      ...process.env,
     },
   },
   extraBabelPresets: [
